@@ -4,9 +4,58 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarrotMeasure"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:ad="https://github.com/Dirkster99/AvalonDock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="700" Width="1200">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="View" Command="{Binding SayHelloCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self},Path=Header}">
+                </MenuItem>
+                <MenuItem Header="Setting" Command="{Binding SayHelloCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self},Path=Header}"/>
+            </Menu>
+            <ad:DockingManager>
+                <ad:DockingManager.Theme>
+                    <ad:Vs2013LightTheme/>
+                    <!--<ad:Vs2013DarkTheme/>-->
+                </ad:DockingManager.Theme>
+                <ad:LayoutRoot>
+                    <ad:LayoutPanel Orientation="Horizontal" DockHeight="Auto" DockWidth="Auto">
+                        <ad:LayoutAnchorablePaneGroup DockMinWidth="200" FloatingWidth="200">
+                            <ad:LayoutAnchorablePane DockHeight="*" DockWidth="*">
+                                <ad:LayoutAnchorable Title="Devices">
+                                    <Frame Source="DevicesPage.xaml"/>
+                                </ad:LayoutAnchorable>
+                            </ad:LayoutAnchorablePane>
+                        </ad:LayoutAnchorablePaneGroup>
+                        <ad:LayoutPanel Orientation="Vertical" DockHeight="Auto" DockWidth="Auto">
+                            <ad:LayoutDocumentPaneGroup>
+                                <ad:LayoutDocumentPane DockHeight="*" DockWidth="*">
+                                    <ad:LayoutDocument Title="Page2">
+                                        <Frame Source="AppPage1.xaml"/>
+                                    </ad:LayoutDocument>
+                                    <ad:LayoutDocument Title="Page3">
+                                        <Frame Source="AppPage2.xaml"/>
+                                    </ad:LayoutDocument>
+                                </ad:LayoutDocumentPane>
+                            </ad:LayoutDocumentPaneGroup>
+                            <ad:LayoutAnchorablePaneGroup DockMinHeight="200" FloatingHeight="200">
+                                <ad:LayoutAnchorablePane DockHeight="*" DockWidth="*">
+                                    <ad:LayoutAnchorable Title="Logger">
+                                        <Frame Source="DevicesPage.xaml"/>
+                                    </ad:LayoutAnchorable>
+                                </ad:LayoutAnchorablePane>
+                            </ad:LayoutAnchorablePaneGroup>
+                        </ad:LayoutPanel>
+                    </ad:LayoutPanel>
+                </ad:LayoutRoot>
 
+            </ad:DockingManager>
+        </DockPanel>
     </Grid>
 </Window>

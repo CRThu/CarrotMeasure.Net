@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:CarrotMeasure"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/AvalonDock.Themes.VS2013;component/LightBrushs.xaml"/>
+                <!--<ResourceDictionary Source="/AvalonDock.Themes.VS2013;component/DarkBrushs.xaml"/>-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
