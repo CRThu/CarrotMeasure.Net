@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CarrotMeasure
+namespace CarrotMeasure.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Page3.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AppPage2 : Page
     {
-        public MainWindow()
+        public AppPage2()
         {
             InitializeComponent();
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarrotMeasure.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,8 @@ namespace CarrotMeasure
     /// </summary>
     public partial class App : Application
     {
+        //public new static App Current => (App)Application.Current;
+        //public static ViewModel.ViewModelLocator Locator { get; set; } = new();
+        public static ViewModelLocator Locator => (ViewModelLocator)App.Current.Resources["Locator"];
     }
 }

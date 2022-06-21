@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 
-namespace CarrotMeasure
+namespace CarrotMeasure.ViewModel
 {
     public class DevicesPageViewModel : ObservableObject
     {

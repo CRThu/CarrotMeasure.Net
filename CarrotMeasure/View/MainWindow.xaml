@@ -1,4 +1,4 @@
-﻿<Window x:Class="CarrotMeasure.MainWindow"
+﻿<Window x:Class="CarrotMeasure.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,11 +7,11 @@
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:ad="https://github.com/Dirkster99/AvalonDock"
+        xmlns:vm="clr-namespace:CarrotMeasure.ViewModel"
+        d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}"
+        DataContext="{Binding Source={StaticResource Locator}, Path=MainWindow}"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1200">
-    <Window.DataContext>
-        <local:MainWindowViewModel/>
-    </Window.DataContext>
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
@@ -36,10 +36,10 @@
                         <ad:LayoutPanel Orientation="Vertical" DockHeight="Auto" DockWidth="Auto">
                             <ad:LayoutDocumentPaneGroup>
                                 <ad:LayoutDocumentPane DockHeight="*" DockWidth="*">
-                                    <ad:LayoutDocument Title="Page2">
+                                    <ad:LayoutDocument Title="AppPage1">
                                         <Frame Source="AppPage1.xaml"/>
                                     </ad:LayoutDocument>
-                                    <ad:LayoutDocument Title="Page3">
+                                    <ad:LayoutDocument Title="AppPage2">
                                         <Frame Source="AppPage2.xaml"/>
                                     </ad:LayoutDocument>
                                 </ad:LayoutDocumentPane>

@@ -10,7 +10,7 @@ using System.Windows.Data;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 
-namespace CarrotMeasure
+namespace CarrotMeasure.ViewModel
 {
     public class MainWindowViewModel : ObservableObject
     {

@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarrotMeasure
+namespace CarrotMeasure.ViewModel
 {
-    public class AppPage2ViewModel : ObservableObject
+    public class AppPage1ViewModel : ObservableObject
     {
-        private string text = "PAGE3";
+        private string text = "AppPage1Text";
         public string Text
         {
             get { return text; }
