@@ -9,21 +9,30 @@
         xmlns:ad="https://github.com/Dirkster99/AvalonDock"
         xmlns:vm="clr-namespace:CarrotMeasure.ViewModel"
         d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}"
-        DataContext="{Binding Source={StaticResource Locator}, Path=MainWindow}"
+        DataContext="{Binding Source={StaticResource Locator},Path=MainWindow}"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1200">
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="View" Command="{Binding SayHelloCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self},Path=Header}">
+                <MenuItem Header="View" Command="{Binding SayHelloCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}">
                 </MenuItem>
-                <MenuItem Header="Setting" Command="{Binding SayHelloCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self},Path=Header}"/>
+                <MenuItem Header="Setting">
+                    <MenuItem Header="Theme" ItemsSource="{Binding Themes}">
+                        <MenuItem.ItemContainerStyle>
+                            <Style TargetType="MenuItem">
+                                <Setter Property="Header" Value="{Binding Name}"/>
+                                <Setter Property="IsChecked" Value="{Binding IsChecked}"/>
+                                <Setter Property="IsCheckable" Value="True"/>
+                                <Setter Property="Command" Value="{Binding DataContext.ThemeChangeCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"/>
+                                <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                <!--<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=MenuItem,AncestorLevel=1}, Path=Header}"/>-->
+                            </Style>
+                        </MenuItem.ItemContainerStyle>
+                    </MenuItem>
+                </MenuItem>
             </Menu>
-            <ad:DockingManager>
-                <ad:DockingManager.Theme>
-                    <ad:Vs2013LightTheme/>
-                    <!--<ad:Vs2013DarkTheme/>-->
-                </ad:DockingManager.Theme>
+            <ad:DockingManager x:Name="DockManager" Theme="{Binding SelectedTheme}" >
                 <ad:LayoutRoot>
                     <ad:LayoutPanel Orientation="Horizontal" DockHeight="Auto" DockWidth="Auto">
                         <ad:LayoutAnchorablePaneGroup DockMinWidth="200" FloatingWidth="200">

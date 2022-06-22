@@ -8,13 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="C:\Users\Administrator\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\Container.cs" />
-    <Compile Remove="C:\Users\Administrator\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\Expression.cs" />
-    <Compile Remove="C:\Users\Administrator\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\FastExpressionCompiler.cs" />
-    <Compile Remove="C:\Users\Administrator\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\ImTools.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Dirkster.AvalonDock" Version="4.70.0" />
     <PackageReference Include="Dirkster.AvalonDock.Themes.VS2013" Version="4.70.0" />
     <PackageReference Include="DryIoc.dll" Version="5.1.0" />
