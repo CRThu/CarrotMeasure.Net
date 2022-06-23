@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using AvalonDock.Layout;
 using CarrotMeasure.Utility;
 using CarrotMeasure.ViewModel.ComponentModel;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
@@ -45,6 +46,13 @@ namespace CarrotMeasure.ViewModel
         {
             get { return themes; }
             set { SetProperty(ref themes, value); }
+        }
+
+        private ObservableCollection<GeneralAppPageViewModel> appPages;
+        public ObservableCollection<GeneralAppPageViewModel> AppPages
+        {
+            get { return appPages; }
+            set { SetProperty(ref appPages, value); }
         }
 
 

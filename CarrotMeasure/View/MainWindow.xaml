@@ -32,7 +32,8 @@
                     </MenuItem>
                 </MenuItem>
             </Menu>
-            <ad:DockingManager x:Name="DockManager" Theme="{Binding SelectedTheme}" >
+            
+            <ad:DockingManager x:Name="DockManager" Theme="{Binding SelectedTheme}" DocumentsSource="{Binding AppPages}">
                 <ad:LayoutRoot>
                     <ad:LayoutPanel Orientation="Horizontal" DockHeight="Auto" DockWidth="Auto">
                         <ad:LayoutAnchorablePaneGroup DockMinWidth="200" FloatingWidth="200">
@@ -45,12 +46,12 @@
                         <ad:LayoutPanel Orientation="Vertical" DockHeight="Auto" DockWidth="Auto">
                             <ad:LayoutDocumentPaneGroup>
                                 <ad:LayoutDocumentPane DockHeight="*" DockWidth="*">
-                                    <ad:LayoutDocument Title="AppPage1">
+                                    <!--<ad:LayoutDocument Title="AppPage1">
                                         <Frame Source="AppPage1.xaml"/>
                                     </ad:LayoutDocument>
                                     <ad:LayoutDocument Title="AppPage2">
                                         <Frame Source="AppPage2.xaml"/>
-                                    </ad:LayoutDocument>
+                                    </ad:LayoutDocument>-->
                                 </ad:LayoutDocumentPane>
                             </ad:LayoutDocumentPaneGroup>
                             <ad:LayoutAnchorablePaneGroup DockMinHeight="200" FloatingHeight="200">
