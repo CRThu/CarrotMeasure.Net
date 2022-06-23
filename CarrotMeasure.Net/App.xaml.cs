@@ -1,4 +1,4 @@
-﻿using CarrotMeasure.ViewModel;
+﻿using CarrotMeasure.Net.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace CarrotMeasure
+namespace CarrotMeasure.Net
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 
-namespace CarrotMeasure.ViewModel
+namespace CarrotMeasure.Net.ViewModel
 {
-    public class DevicesPageViewModel : ObservableObject
+    public class LoggerPageViewModel : ObservableObject
     {
-        private int value=123456;
+        private int value = 123456;
         public int Value
         {
             get { return value; }

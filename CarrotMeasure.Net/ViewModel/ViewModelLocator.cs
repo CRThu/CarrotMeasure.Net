@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CarrotMeasure.ViewModel;
 using DryIoc;
 
-namespace CarrotMeasure.ViewModel
+namespace CarrotMeasure.Net.ViewModel
 {
     public class ViewModelLocator
     {

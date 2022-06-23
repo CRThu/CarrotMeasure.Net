@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarrotMeasure.ViewModel
+namespace CarrotMeasure.Net.ViewModel
 {
     public class AppPage1ViewModel : ObservableObject
     {

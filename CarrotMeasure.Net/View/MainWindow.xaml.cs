@@ -1,6 +1,5 @@
-﻿using CarrotMeasure.Utility;
-using CarrotMeasure.ViewModel;
-using CarrotMeasure.ViewModel.ComponentModel;
+﻿using CarrotMeasure.Net.Utility;
+using CarrotMeasure.Net.ViewModel;
 using Microsoft.Toolkit.Mvvm.Messaging;
 using System;
 using System.Collections.Generic;
@@ -17,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CarrotMeasure.View
+namespace CarrotMeasure.Net.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

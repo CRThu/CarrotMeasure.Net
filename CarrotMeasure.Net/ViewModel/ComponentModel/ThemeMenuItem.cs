@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarrotMeasure.ViewModel.ComponentModel
+namespace CarrotMeasure.Net.ViewModel.ComponentModel
 {
     public class ThemeMenuItem : ObservableObject
     {

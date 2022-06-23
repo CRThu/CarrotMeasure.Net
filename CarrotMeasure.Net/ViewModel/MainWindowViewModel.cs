@@ -8,13 +8,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using AvalonDock.Layout;
-using CarrotMeasure.Utility;
-using CarrotMeasure.ViewModel.ComponentModel;
+using CarrotMeasure.Net.Utility;
+using CarrotMeasure.Net.ViewModel.ComponentModel;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 using Microsoft.Toolkit.Mvvm.Messaging;
 
-namespace CarrotMeasure.ViewModel
+namespace CarrotMeasure.Net.ViewModel
 {
     public class MainWindowViewModel : ObservableObject
     {
@@ -71,7 +71,7 @@ namespace CarrotMeasure.ViewModel
             {
                 Themes[i].IsChecked = false;
             }
-            Themes.Where(t=>t.Name==arg).First().IsChecked = true;
+            Themes.Where(t => t.Name == arg).First().IsChecked = true;
 
             SelectedTheme = arg switch
             {

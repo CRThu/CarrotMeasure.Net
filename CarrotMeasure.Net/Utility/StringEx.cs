@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarrotMeasure.Utility
+namespace CarrotMeasure.Net.Utility
 {
     public static class StringEx
     {
