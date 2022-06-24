@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarrotMeasure.Net.ViewModel
 {
-    public class AppPage1ViewModel : ObservableObject
+    public class App1ViewModel : GeneralAppViewModel
     {
         private string text = "AppPage1Text";
         public string Text

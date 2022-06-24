@@ -26,6 +26,13 @@ namespace CarrotMeasure.Net.ViewModel
             Themes = new(EnumEx.GetAllItems<Theme>().Select(t => new ThemeMenuItem() { Name = t }));
             SelectedTheme = new AvalonDock.Themes.Vs2013LightTheme();
             Themes.Where(t => t.Name == Theme.VS2013LightTheme).First().IsChecked = true;
+
+            AppViewModels = new();
+            for (int i = 0; i < 3; i++)
+            {
+                AppViewModels.Add(new App1ViewModel() { Title = "SampleApp A" + i.ToString() });
+                AppViewModels.Add(new App2ViewModel() { Title = "SampleApp B" + i.ToString() });
+            }
         }
 
         private AvalonDock.Themes.Theme selectedTheme;
@@ -48,11 +55,14 @@ namespace CarrotMeasure.Net.ViewModel
             set { SetProperty(ref themes, value); }
         }
 
-        private ObservableCollection<GeneralAppPageViewModel> appPages;
-        public ObservableCollection<GeneralAppPageViewModel> AppPages
+        private ObservableCollection<GeneralAppViewModel> appViewModels;
+        /// <summary>
+        /// App控件集合
+        /// </summary>
+        public ObservableCollection<GeneralAppViewModel> AppViewModels
         {
-            get { return appPages; }
-            set { SetProperty(ref appPages, value); }
+            get { return appViewModels; }
+            set { SetProperty(ref appViewModels, value); }
         }
 
 

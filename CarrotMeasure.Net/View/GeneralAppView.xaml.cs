@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace CarrotMeasure.Net.View
 {
     /// <summary>
-    /// GeneralAppPageView.xaml 的交互逻辑
+    /// GeneralAppView.xaml 的交互逻辑
     /// </summary>
-    public partial class GeneralAppPageView : Page
+    public partial class GeneralAppView : UserControl
     {
-        public GeneralAppPageView()
+        public GeneralAppView()
         {
             InitializeComponent();
         }

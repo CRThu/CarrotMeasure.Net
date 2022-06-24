@@ -18,7 +18,7 @@ namespace CarrotMeasure.Net.View
     /// <summary>
     /// Page3.xaml 的交互逻辑
     /// </summary>
-    public partial class AppPage2 : Page
+    public partial class AppPage2 : UserControl
     {
         public AppPage2()
         {

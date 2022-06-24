@@ -7,6 +7,7 @@
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:ad="https://github.com/Dirkster99/AvalonDock"
+        xmlns:v="clr-namespace:CarrotMeasure.Net.View"
         xmlns:vm="clr-namespace:CarrotMeasure.Net.ViewModel"
         d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}"
         DataContext="{Binding Source={StaticResource Locator},Path=MainWindow}"
@@ -32,8 +33,29 @@
                     </MenuItem>
                 </MenuItem>
             </Menu>
-            
-            <ad:DockingManager x:Name="DockManager" Theme="{Binding SelectedTheme}" DocumentsSource="{Binding AppPages}">
+
+            <ad:DockingManager x:Name="DockManager" Theme="{Binding SelectedTheme}" DocumentsSource="{Binding AppViewModels}">
+                
+                <ad:DockingManager.Resources>
+                    <!-- add views for specific ViewModels -->
+                    <DataTemplate DataType="{x:Type vm:App1ViewModel}">
+                        <v:AppPage1/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type vm:App2ViewModel}">
+                        <v:AppPage2/>
+                    </DataTemplate>
+                </ad:DockingManager.Resources>
+                
+                <ad:DockingManager.LayoutItemContainerStyle>
+                    <!-- you can add additional bindings from the layoutitem to the DockWindowViewModel -->
+                    
+                    <Style TargetType="{x:Type ad:LayoutItem}" >
+                        <Setter Property="Title" Value="{Binding Model.Title}" />
+                        <Setter Property="CloseCommand" Value="{Binding Model.CloseCommand}" />
+                        <Setter Property="CanClose" Value="{Binding Model.CanClose}" />
+                    </Style>
+                </ad:DockingManager.LayoutItemContainerStyle>
+                
                 <ad:LayoutRoot>
                     <ad:LayoutPanel Orientation="Horizontal" DockHeight="Auto" DockWidth="Auto">
                         <ad:LayoutAnchorablePaneGroup DockMinWidth="200" FloatingWidth="200">

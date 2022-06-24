@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarrotMeasure.Net.ViewModel
 {
-    public class AppPage2ViewModel : ObservableObject
+    public class App2ViewModel : GeneralAppViewModel
     {
         private string text = $"Get {App.Locator.AppPage1.Text} From AppPage1";
         public string Text
